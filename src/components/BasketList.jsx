@@ -11,8 +11,8 @@ function BasketList(props) {
         return sum + el.price * el.quantity;
     }, 0);
     return (
-        <ul className="collection">
-            <li className="collection-item active">Корзина</li>
+        <ul className="collection basket-list">
+            <li className="collection-item active indigo darken-4">Корзина</li>
             {order.length ? (
                 order.map((item) => 
                 <BasketItem 
@@ -24,7 +24,7 @@ function BasketList(props) {
             ) : (
             <li className="collection-item">Корзина пуста</li>
             )}
-            <li className="collection-item active">Общая стоимость заказа: {totalPrice} руб. </li>
+            <li className="collection-item active indigo darken-4">Общая стоимость заказа: {totalPrice} руб. </li>
             <i className="material-icons basket-clear" onClick={handleBasketShow}>clear</i>
         </ul>
     );
